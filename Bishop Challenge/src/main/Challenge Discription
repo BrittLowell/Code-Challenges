@@ -1,0 +1,15 @@
+Weekly Coding Challenge: Bishop Challenge:
+
+Your chess teacher wants to know if a Bishop can reach a certain spot on the board in the given amount
+of moves.
+Given a starting square start, ending square end and the maximum number of moves allowed n.
+Return true if the ending square can be reached from the starting square within the given amount of moves.
+Keep in mind the chessboard goes from a1 to h8 (8x8).
+Examples
+<code>Bishop("a1", "b4", 2) ➞ truebishop("a1", "b5", 5) ➞ falsebishop("f1", "f1", 0) ➞ true</code>
+Notes:
+
+    Chessboard is always empty (only the Bishop is there).
+    Bishop can move in any direction diagonally.
+    If the starting and ending square are the same, return true (even if the move is 0).
+    Square names will always be lowercase and valid.
