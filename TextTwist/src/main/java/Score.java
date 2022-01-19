@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Score {
 
     //    Create a function that takes in an array of already-guessed words, the unscrambled 6-letter word and
@@ -9,7 +11,7 @@ public class Score {
 //            6-letter words are 4 pts + 50 pt bonus (for unscrambling the word)
 //            Remember that invalid words (words that cannot be formed from the 6-letter unscrambled words)
 //            count as 0 pts.
-    public int calcScore(String[] guesses, String word){
+    public int calcScore(ArrayList<String> guesses, String word){
 
         return 0;
     }
