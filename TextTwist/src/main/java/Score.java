@@ -4,7 +4,7 @@ import java.util.HashMap;
 public class Score {
     Validation validation = new Validation();
 
-//TODO:Add comments to code and then submit coding challenge
+//This method calculates the score based on the character count of each guess.
     public int calcScore(ArrayList<String> guesses, String unscrambledWord){
         int len;
         int total = 0;

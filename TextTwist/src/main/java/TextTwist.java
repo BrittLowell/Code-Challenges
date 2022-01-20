@@ -7,6 +7,7 @@ public class TextTwist {
         Scanner scanner = new Scanner(System.in);
         ScrambleWords scrambleWords = new ScrambleWords();
 
+        //Get the unscrambled word as well as the players' guesses
         System.out.println("Input the unscrambled word below.");
         String unscrambledWord = scanner.nextLine();
         String scram = scrambleWords.shuffle(unscrambledWord);

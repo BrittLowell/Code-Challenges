@@ -6,6 +6,7 @@ import java.util.regex.Matcher;
 import java.util.stream.Collectors;
 
 public class Validation {
+    //Validates whether the guesses are valid words that only contain the characters present in the unscrambled word.
     public boolean validWord(String guess, String unscrambledWord){
         if(guess.length() > 6 || guess.length() < 3){
             return false;
