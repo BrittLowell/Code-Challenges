@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class TextTwist {
@@ -7,25 +6,21 @@ public class TextTwist {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         ScrambleWords scrambleWords = new ScrambleWords();
-        Validation validation = new Validation();
 
+        System.out.println("Input the unscrambled word below.");
         String unscrambledWord = scanner.nextLine();
         String scram = scrambleWords.shuffle(unscrambledWord);
-        System.out.println("Input valid words from the following scrambled word: " + scram);
+        System.out.println("Input valid words from the following scrambled word: " + scram + "\n");
+        System.out.println("Valid words are: \nBetween 3 and 6 characters long. \nOnly contain the letters" +
+                " in the scrambled word. \nContains lesser or equal number of the available characters " +
+                "(ie if there are two n's, then each valid guess only contains two or less n's)");
 
         boolean guessing = true;
         String guess;
         ArrayList<String> guesses = new ArrayList<>();
         while(guessing){
             guess = scanner.nextLine();
-
-            if(validation.validWord(unscrambledWord,guess)){
-                guesses.add(guess);
-            } else{
-                System.out.println("Invalid guess! Please guess again using only the characters in the" +
-                        "following word: " + scram);
-                continue;
-            }
+            guesses.add(guess);
             System.out.println("Would you like to make another guess? Y/N");
             String answer = scanner.nextLine();
             if(answer.equals("n") || answer.equals("N")){

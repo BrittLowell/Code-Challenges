@@ -1,26 +1,20 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+import java.util.stream.Collectors;
 
 public class Validation {
-    public boolean validWord(String unscrambledWord, String word){
-        boolean valid = false;
-        char c;
-        ArrayList<Character> charList = new ArrayList<>(unscrambledWord.length());
-        for(int i = 0;i<unscrambledWord.length();i++){
-            c = unscrambledWord.charAt(i);
-            if(charList.contains(c)){
-                continue;
-            }
-            Pattern p = Pattern.compile(Character.toString(c));
-            if(p.matcher(word).groupCount() <= p.matcher(unscrambledWord).groupCount()){
-                valid = p.matcher(word).matches();
-            } else{
-                return false;
-            }
-            charList.add(c);
+    public boolean validWord(String word){
+        if(word.length() > 6 || word.length() < 3){
+            return false;
         }
-        return valid;
+        //create another hashmap (guessMap) that contains the frequency of characters in the guesses
+        //check if each of the keys in guessMap exists in the unfilteredWordMap
+        //check if the values in the guessMap are <= the values in the unfilteredWordMap
+
+        return false;//TODO: Replace this return statement with the actual return statement
     }
+
 }
