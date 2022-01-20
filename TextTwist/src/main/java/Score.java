@@ -17,9 +17,9 @@ public class Score {
         int len;
         int total = 0;
         for (String guess : guesses) {
-            if(validation.validWord(guess)){
+            if(validation.validWord(guess,unscrambledWord)){
                 len = guess.length();
-                System.out.println("Len: " + len);
+                System.out.println("Len: " + len + "; guess = " + guess);
             } else {
                 len = 0;
             }
